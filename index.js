@@ -2,14 +2,21 @@
 var sNombre;
 
 $(document).ready(function() {
-sNombre = prompt('name?');
-$('#sNombre').html(sNombre);
-$(".sNombre").html(sNombre);
+// $('#exampleModal').modal('show');
+$('#closeModal').click(function(){
+    sNombre = $('#sNombre').val();
+    $('#exampleModal').modal('hide');
+   
+    $('#sNombre').html(sNombre);
+    $(".sNombre").html(sNombre);
+})
+
+
 
 });
 
-
 function alerta(){
+    console.log(sNombre);
         $.notify({
             // options
             icon: 'glyphicon glyphicon-warning-sign',
@@ -26,7 +33,7 @@ function alerta(){
             newest_on_top: true,
             showProgressbar: false,
             placement: {
-                from: "top",
+                from: "bottom",
                 align: "left"
             },
             offset: 0,

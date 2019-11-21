@@ -1,23 +1,45 @@
 @media screen and (min-width: 320px) and (max-width: 736px) {
     body {
 
-        background:#F2F3F5;
+        background: #F2F3F5;
     }
-    .carta{
+
+    .carta {
         display: flex;
-        border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-    margin-top: 15px;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: .25rem;
+        margin-top: 15px;
     }
+
     .carta-img,
-    .carta-info{
+    .carta-info {
         text-align: center;
         background-color: #fff;
     }
-    .carta-img{
+
+    .carta-img {
+        background: #f38d25;
         width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .carta-info{
+
+    .carta-info {
         width: 70%;
+    }
+    .carta-div{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .modal-espacio{
+        padding: 2%;
+    }
+    .radios{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
     }
 }

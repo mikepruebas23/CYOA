@@ -14,20 +14,35 @@
 <body>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+        aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <!-- <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 </div> -->
-                <div class="modal-body">
+                <div class="modal-espacio">
                     <div class="form-group">
                         <label for="sNombre" class="col-form-label">Nombre: </label>
-                        <input type="text" class="form-control" id="sNombre">
+                        <input type="text" class="form-control" id="sNombre" maxlength="8" required
+                            pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" placeholder="Nombre de usuario">
+                        <div class="radios">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="masculino" name="genero" value="masculino"
+                                    class="custom-control-input" required>
+                                <label class="custom-control-label" for="masculino">Masculino</label>
+                            </div>
+
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="femenino" name="genero" value="femenino"
+                                    class="custom-control-input" required>
+                                <label class="custom-control-label" for="femenino">Femenino</label>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" id="closeModal" class="btn btn-primary">Listo!</button>
+                <div class="modal-espacio" style="text-align: center;">
+                    <button type="button" id="closeModal" class="btn btn-primary" style="width: 95%;">Listo!</button>
                 </div>
             </div>
         </div>
@@ -35,25 +50,24 @@
     <!-- Image and text -->
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" height="10px"
-                class="d-inline-block align-top" alt="">
+            <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" height="10px" class="d-inline-block align-top" alt="">
             Bienvenido
         </a>
-        <div id="sNombre"></div>
     </nav>
     <div class="container">
-                  <div class="carta">
-                      <div class="carta-img">
-                            <img src="images.jpg" width="12px" height="80px" class="card-img" alt="...">
-                      </div>
-                      <div class="carta-info">
-                          <div>informcion</div>
-                          <div>informcion</div>
-                          <div>informcion</div>
-                      </div>
-                  </div>
+        <div class="carta">
+            <div class="carta-img">
+                <img id="miFoto" width="12px" height="60px" class="card-img" alt="Perfil usuario">
+            </div>
+            <div class="carta-info">
+                <div class="carta-div">Nombre: <div class="sNombre"></div>
+                </div>
+                <div class="carta-div">Género: <div class="bGenero"></div></div>
+            </div>
+        </div>
 
     </div>
+
 
     <br>
     <br>
@@ -71,7 +85,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="bootstrap-notify.min.js"></script>
 <script src="index.js"></script>
+<script src="bootstrap-notify-master/bootstrap-notify.min.js"></script>
 
 </html>

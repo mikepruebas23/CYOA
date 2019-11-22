@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="corazon.css">
 
     <title>CYOA</title>
 </head>
@@ -48,43 +49,54 @@
         </div>
     </div>
     <!-- Image and text -->
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark navbar-detalles">
         <a class="navbar-brand" href="#">
             <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" height="10px" class="d-inline-block align-top" alt="">
             Bienvenido
         </a>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="like" id="like"></div>
+            <div id="iVida"></div>
+        </div>
     </nav>
     <div class="container">
         <div class="carta">
             <div class="carta-img">
                 <img id="miFoto" width="12px" height="60px" class="card-img" alt="Perfil usuario">
+                <!-- <div class="like" id="like"></div> -->
             </div>
             <div class="carta-info">
-                <div class="carta-div">Nombre: <div class="sNombre"></div>
+                <div style="display: flex;">
+                    <div class="sNombre ancho50"></div>
+                    <div class="bGenero ancho50"></div>
                 </div>
-                <div class="carta-div">Género: <div class="bGenero"></div>
+                <div style="display: flex;">
+                    <!-- <div class="like" id="like"></div> -->
+                    <!-- <div class="ancho50" id="iEnergia"></div> -->
                 </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="carta">
+            <div class="historia" id="historia">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem dolor vitae? Similique consectetur
+                reiciendis, asperiores officiis voluptatibus maiores ea. Omnis quas deleniti aut maxime nam unde
+                similique
+                assumenda magni?
             </div>
         </div>
     </div>
     <div class="container">
         <div class="carta">
-           <div class="historia" id="historia">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum autem dolor vitae? Similique consectetur
-            reiciendis, asperiores officiis voluptatibus maiores ea. Omnis quas deleniti aut maxime nam unde similique
-            assumenda magni?
-           </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="carta">
-           <div class="carta-buttons">
+            <div class="carta-buttons">
                 <button class="" style="width: 45%;">SI</button>
-            <button class="" style="width: 45%;">NO</button>
-           </div>
+                <button class="" style="width: 45%;">NO</button>
+            </div>
         </div>
     </div>
-    <!-- <button onclick="alerta()">ALERTA</button> -->
+    <!-- <button onclick="alerta()">NOTIFICACION</button> -->
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -92,5 +104,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="index.js"></script>
 <script src="bootstrap-notify-master/bootstrap-notify.min.js"></script>
+<script src="corazon.js"></script>
+<script src="energia.js"></script>
 
 </html>
